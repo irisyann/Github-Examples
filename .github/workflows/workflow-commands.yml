@@ -16,7 +16,7 @@ jobs:
         run: |
           echo "SOME_VAL=hohoho" >> $SOME_ENV
       - name: "step 2"
-        runL |
+        run: |
           echo SOME_VAL
 
 
