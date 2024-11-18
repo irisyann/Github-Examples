@@ -12,5 +12,11 @@ jobs:
           echo "Msg 1"
           echo "Msg 2"
           echo "::endgroup::"
+      - name: "step 1"
+        run: |
+          echo "SOME_VAL=hohoho" >> $SOME_ENV
+      - name: "step 2"
+        runL |
+          echo SOME_VAL
 
 
