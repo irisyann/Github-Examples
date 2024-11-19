@@ -7,7 +7,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: "My Step"
-        run: echo "Hello! $MY_ACTOR"
+        run: echo "Hello $MY_ACTOR, you did a $MY_ACTION!"
         env:
           MY_ACTION: ${{ github.action }}
           MY_ACTOR: ${{ github.actor}}
