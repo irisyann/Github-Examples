@@ -1,0 +1,16 @@
+name: Dependent jobs example
+
+on: ['push']
+
+jobs:
+  job_2:
+    runs-on: self-hosted
+    needs: job_1
+    steps:
+      - name: step_2A
+        run: echo "Hello from job 2"
+  job_1:
+    runs-on: self-hosted
+    steps:
+      - name: step_1A
+        run: echo "Hello from job 1"
