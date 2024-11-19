@@ -11,6 +11,12 @@ jobs:
         run: echo "Hello from job 2"
   job_1:
     runs-on: self-hosted
+    needs: job_3
     steps:
       - name: step_1A
         run: echo "Hello from job 1"
+  job_3:
+    runs-on: self-hosted
+    steps:
+      - name: step_3A
+        run: echo "Hello from job 3"
